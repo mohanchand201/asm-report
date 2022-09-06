@@ -78,9 +78,7 @@ public class AsmReportApplication
 				try {
 				InputStream dbcreds_filestream = classLoader.getResourceAsStream(db_creds_file);
 				
-//				info.put("user", "sys");
-//				info.put("password", "MJDba1976");
-//				info.put("internal_logon", "sysdba");
+
 				info.load(dbcreds_filestream);
 				// connect as sysdba
 				Connection con = DriverManager.getConnection(res[2], info);
